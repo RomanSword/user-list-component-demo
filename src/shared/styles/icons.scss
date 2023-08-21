@@ -1,0 +1,19 @@
+.icon {
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &_regular {
+    width: 24px;
+    height: 24px;
+  }
+
+  &_relocate {
+    background-image: url('/images/relocate.svg');
+  }
+
+  &_dots {
+    background-image: url('/images/dots.svg');
+  }
+}

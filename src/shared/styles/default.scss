@@ -1,0 +1,26 @@
+.list {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+img {
+  font-size: 10px;
+  color: var(--white);
+  word-break: break-word;
+}
+
+.empty-list-message {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}

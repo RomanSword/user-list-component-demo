@@ -1,0 +1,146 @@
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .user-list-panel {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+
+    .form-control {
+      width: 300px;
+      margin-right: 10px;
+    }
+
+    .button {
+      width: 100px;
+    }
+  }
+
+  .user-list-wrapper {
+    position: relative;
+    flex: 1;
+    padding: 0 0 0 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    scrollbar-gutter: stable;
+  }
+
+  .user-list-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--background-blue-bright);
+    border-radius: 5px;
+    z-index: 10;
+  }
+
+  .user-list-header-item {
+    cursor: pointer;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: var(--gray);
+    }
+
+    &[data-is-selected="true"] {
+      border-color: var(--blue);
+    }
+  }
+
+  .user-list-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    font-size: 17px;
+
+    &_floating-bottom {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      background-color: var(--white);
+    }
+  }
+
+  .user-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    font-size: 15px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--background-blue-bright);
+    }
+
+    .user-list-column {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 5px;
+      padding-left: 5px;
+      word-break: break-all;
+      box-sizing: border-box;
+
+      // first name
+      &:nth-child(1) {
+        width: 10%;
+      }
+
+      // last name
+      &:nth-child(2) {
+        width: 10%;
+      }
+
+      // email
+      &:nth-child(3) {
+        width: 20%;
+      }
+
+      // phone
+      &:nth-child(4) {
+        width: 15%;
+      }
+
+      // username
+      &:nth-child(5) {
+        width: 15%;
+      }
+
+      // registration_date
+      &:nth-child(6) {
+        width: 13%;
+      }
+
+      // activity_date
+      &:nth-child(7) {
+        width: 13%;
+      }
+
+      // actions
+      &:nth-child(8) {
+        width: 70px;
+      }
+    }
+
+    .user-list-action {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+.user-list-submit-panel {
+  margin-top: 20px;
+}

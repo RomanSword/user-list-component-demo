@@ -1,0 +1,16 @@
+.label-value {
+  display: flex;
+  flex-direction: column;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  .label {
+    margin-bottom: 3px;
+    font-size: 17px;
+    font-family: 'Roboto_Bold'
+  }
+
+  .value {
+    font-size: 15px;
+  }
+}

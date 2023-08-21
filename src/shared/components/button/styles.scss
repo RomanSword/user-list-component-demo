@@ -1,0 +1,33 @@
+.button {
+  width: 100%;
+  border-radius: 5px;
+  font-family: 'MuseoSans Regular';
+  font-size: 16px;
+  cursor: pointer;
+  transition: none;
+  height: 40px;
+
+  &_primary {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--blue-hover);
+      color: var(--white);
+    }
+
+    &:focus {
+      background-color: var(--blue-active);
+      color: var(--white);
+    }
+
+    &:disabled {
+      background-color: var(--blue-disabled);
+      border-color: var(--blue-disabled);
+      color: var(--white);
+      cursor: not-allowed;
+      pointer-events: auto;
+    }
+  }
+}
