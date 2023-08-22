@@ -22,7 +22,7 @@ const ModalComponent = ({
               className='modal-dialog-close-button'
               onClick={onClose}
             >
-              &times;
+              Закрыть
             </button>
           </header>
 
