@@ -13,6 +13,8 @@
 
 Из библиотек использован только `React`
 
+[Ссылка](https://transcendent-centaur-2ea404.netlify.app/) на демонстрацию приложения
+
 ### Установка:
  - `npm install`
  - `npm run start`
