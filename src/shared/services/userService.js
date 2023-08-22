@@ -48,6 +48,8 @@ const userService = {
 
     return response.map(item => ({
       ...item,
+      registration_date_raw: item.registration_date,
+      activity_date_raw: item.activity_date,
       registration_date: formatDateString(item.registration_date),
       activity_date: formatDateString(item.activity_date),
     }))
@@ -55,18 +57,24 @@ const userService = {
 
   getSortedUsersByKey({ key = null }) {
     return [...this.list].sort((itemA, itemB) => {
-      const valueA = String(itemA[key]).toLowerCase()
-      const valueB = String(itemB[key]).toLowerCase()
+      if (key.includes('date')) {
+        const processedKey = `${key}_raw`
 
-      if (valueA > valueB) {
-        return 1
+        return new Date(itemB[processedKey]) - new Date(itemA[processedKey])
+      } else {
+        const valueA = itemA[key].toLowerCase()
+        const valueB = itemB[key].toLowerCase()
+
+        if (valueA > valueB) {
+          return 1
+        }
+
+        if (valueA < valueB) {
+          return -1
+        }
+
+        return 0
       }
-
-      if (valueA < valueB) {
-        return -1
-      }
-
-      return 0
     })
   },
 
