@@ -1,0 +1,12 @@
+# OSX
+#
+.DS_Store
+
+# compiled output
+*dist/
+*tmp/
+
+# dependencies
+*node_modules
+package-lock.json
+yarn.lock

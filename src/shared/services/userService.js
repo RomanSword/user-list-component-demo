@@ -4,7 +4,7 @@ import formatDateString from '../helpers/formatDateString'
 import { isDigit, mayBeDate } from '../helpers/validators'
 
 const getUsers = {
-  host: 'http://www.filltext.com/?',
+  host: `${import.meta.env.VITE_DOMAIN}/?`,
   rowsCount: 15,
   maxPages: 5,
   params: {

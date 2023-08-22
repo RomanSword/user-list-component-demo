@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "http://www.filltext.com"
+  from = "/api"
   to = "http://www.filltext.com"
   status = 200
